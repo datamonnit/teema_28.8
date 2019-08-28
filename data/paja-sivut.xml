@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <ryhmät>
+    <ryhmä tunnus="data16" kuva="data16.png"></ryhmä>
+    <ryhmä tunnus="data17" kuva="data17.png"></ryhmä>
+    <ryhmä tunnus="data14" kuva="data14.png"></ryhmä>
+  </ryhmät>
+  <palvelut>
+    <palvelu>
+      <otsikko>Ohjelmointi</otsikko>
+      <kuvaus>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus eveniet aliquam ipsum, doloremque dignissimos repudiandae, ipsam itaque quos? Aspernatur, sint!</kuvaus>
+      <kuva>ohjelmointi.png</kuva>
+    </palvelu>
+    <palvelu>
+      <otsikko>Multimedia</otsikko>
+      <kuvaus>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus eveniet aliquam ipsum, doloremque dignissimos repudiandae, ipsam itaque quos? Aspernatur, sint!</kuvaus>
+      <kuva>multimedia.png</kuva>
+    </palvelu>
+  </palvelut>
+</data>

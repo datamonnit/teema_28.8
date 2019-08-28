@@ -1,0 +1,472 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,h2, li a, footer, p {
+  
+}
+
+.ruudukko ul {
+  list-style: none;
+  padding: 0;
+}
+.ruudukko li {
+  padding-left: 1.3em;
+}
+.ruudukko li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+
+.container {
+max-width: 970px;
+margin: 0 auto;
+}
+
+.highlight {
+  display: inline-block;
+  color: #a4be39;
+  font-size: 1.2em;
+  -ms-transform: rotate(10deg); 
+  -webkit-transform: rotate(10deg); 
+  transform: rotate(10deg);
+}
+.lowlight {
+  display: inline-block;
+  
+  -ms-transform: rotate(-10deg); 
+  -webkit-transform: rotate(-10deg); 
+  transform: rotate(-10deg);
+}
+
+
+.pulse {
+  -webkit-animation: pulse 3s ease-out;
+  -webkit-animation-iteration-count: infinite; 
+  opacity: 0.5;
+}
+@-webkit-keyframes pulse {
+  0% { 
+      opacity: 0.5;
+  }
+  50% { 
+      opacity: 1.0;
+  }
+  100% { 
+      opacity: 0.5;
+  }
+}
+
+
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Navigointi */
+.icon {
+  display: none;
+}
+
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+} 
+
+.branding {
+  display: block;
+  float: left;
+  /* @include vertical-align(); */
+} 
+
+.branding img {
+  display: block;
+  float: left;
+  margin: 0 10px;
+  height: 2.5em;
+  width: auto;
+  /* @include vertical-align();  */
+
+  -ms-transform: rotate(-15deg); 
+  -webkit-transform: rotate(-15deg); 
+  transform: rotate(-15deg);
+}
+
+.some {
+  font-size: 0.9em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  text-align: center;
+}
+
+.some i {
+  font-size: 4em;
+  display: block;
+  clear: both;
+  margin: 0 5px;
+  
+}
+
+.some a {
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.some a:hover {
+  color: #444;
+}
+
+/*******************************************
+**      Navigointipalkki -tyylit          **
+********************************************/
+.dropdown-content {position: absolute;}
+
+.heading {
+  background-color: #4D394B;
+  padding: 20px 0px;
+  color: #ccc;
+  font-size: 1.1em;
+}
+
+.heading a {
+  color: #ccc;
+  text-decoration: none;;
+}
+  
+header h1 {
+  float: left;
+}
+  
+header nav{
+  text-align: right;
+  width: 100%;
+  /* color: #979797; */
+}
+  
+header nav ul li { display: inline-block; }
+
+header li {
+  margin: 0px;
+  padding: 10px;
+}
+  
+.dropdown li{
+  display: block;
+  padding: 10px;
+  margin: 0;
+} 
+  
+.dropdown {
+  z-index: 85;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.dropdown-content a {
+  /* background-color: #222; */
+  /* padding: 10px 10px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content li { background-color: #7F5F7C; }
+
+.dropdown-content li:hover {background-color: #444}
+
+.show {
+  display: block;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav li.active {
+  font-weight: bold;
+}
+
+/* Showcase */
+#showcase {
+  min-height: 400px;
+  text-align: center;
+  color: #ffffff;
+  padding: 100px 0;
+}
+
+.index {
+  background-image: url('../img/screenofcode.jpg');
+}
+
+.games {
+  background-image: url('../img/controller.jpg');
+}
+
+.staff {
+  background-image: url('../img/staff.jpg');
+}
+
+
+#showcase h1 {
+  font-size: 60px;
+  margin: 20px;
+}
+
+#showcase p {
+  margin: 25px;
+  font-size: 22px;
+}
+
+.dark_bg {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*******************************************
+**      Grid Styles                       **
+********************************************/
+.ruudukko {
+  font-size: 1.3em;
+  max-width: 1200px;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 200px 200px 200px; */
+  /* border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6; */
+}
+
+
+.ruudukko > section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3em auto min-content;
+  background-color: #ccc;
+  padding: 0px;
+  margin: 0.5em;
+  color: #4D394B;
+}
+.ruudukko h2 {
+  /* background-color: #2EA664; */
+  background-color: #335B2C;
+  padding: 10px;
+  color: #fff;
+}
+
+.ruudukko p, .ruudukko ul, .ruudukko dl {
+  margin: 15px;
+}
+
+.ruudukko p {
+  line-height: 1.5em;
+}
+
+.ruudukko dt {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.ruudukko dd {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.ruudukko .more {
+  line-height: 1em;
+  text-align: right; 
+  margin: 0px;
+}
+
+.btn { 
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(231, 50, 4);
+  color: #fff;
+  border: none;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2); 
+}
+
+.btn:hover {
+  background-color: rgb(192, 49, 24);
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2); 
+  color: #fff;
+}
+
+.btn:active {
+  box-shadow: none;
+  border:none; 
+}
+
+.ruudukko ul {
+  padding: 0px 0px 0 0px;
+  
+}
+
+.ruudukko ul li {
+  margin-left: 0px;
+  line-height: 1.3em;
+}
+
+.ruudukko li a {
+  color: #325A2B;
+  text-decoration: none;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: "a a b b";
+  background-color: #4D394B;
+  color: #ccc;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer li {
+  display: inline-block;
+  margin: 20px;
+}
+
+footer i {
+  font-size: 3em;
+  color: #ccc;
+}
+footer img {
+  height: 80px;
+}
+
+.copy {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+
+/*******************************************
+**      Mobiili -tyylit                   **
+********************************************/
+@media screen and (max-width: 980px) {
+  
+  /*******************************************
+  **      Mobiili-navigaatio                **
+  ********************************************/
+   
+  .topnav ul { clear: both; }
+  .topnav li { display: none; }
+  .icon {
+    display: block;
+    padding-right: 10px;
+    font-size: 1.5em;
+  }
+  
+  .topnav.responsive {position: relative;}
+  .topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsive li, .responsive li a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content { 
+    margin-top: 15px;
+    position: relative;
+  }
+
+  /*******************************************
+  **      Mobiili-showcase                  **
+  ********************************************/
+  #showcase {
+    min-height: 200px;
+    padding: 20px 0;
+  }
+
+
+  /*******************************************
+  **      Mobiili-gridi                     **
+  ********************************************/
+  /* Grid-styles */
+  .ruudukko {
+    max-width: 970px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
+  }
+  .ruudukko > section {
+    margin: 0px 0;
+  }
+  /*******************************************
+  **      Mobiili-footer                     **
+  ********************************************/
+  footer {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+  
+
+}
+
+@media screen and (max-width: 600px) {
+  footer div {
+    margin: 0;
+    padding: 0;
+    clear: both;
+  }
+  footer li {
+    display: block;
+    width: 33%;
+    float: left;
+    margin: 20px 0;
+  }
+}
+
